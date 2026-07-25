@@ -68,7 +68,7 @@ using System;
                 });
 
             // 12- Count the number of products in a specific category.
-            int categoryId = 1; // مثال
+            int categoryId = 1; 
             var q12 = db.Products.Count(p => p.CategoryId == categoryId);
 
             // 13- Calculate the average list price of products.
@@ -107,9 +107,9 @@ using System;
                 });
 
             // 19- Retrieve orders that are completed. 
-            // completed = shipped_date not null and order_status = 4 غالبا
+            // completed = shipped_date not null and order_status = 3
             var q19 = db.Orders
-                .Where(o => o.ShippedDate != null && o.OrderStatus == 4);
+                .Where(o => o.ShippedDate != null && o.OrderStatus == 3);
 
             // 20- List each product with the total quantity sold (sum of quantity from order_items).
             var q20 = db.Products
